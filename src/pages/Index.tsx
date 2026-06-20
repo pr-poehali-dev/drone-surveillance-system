@@ -213,15 +213,22 @@ export default function Index() {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <button
-          onClick={() => scrollToSection(0)}
-          className="flex items-center gap-2 transition-transform hover:scale-105"
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => scrollToSection(0)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25"
+          >
             <span className="font-sans text-xl font-bold text-foreground">Ф</span>
-          </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">ФЕНМИТ ЗабГУ</span>
-        </button>
+          </button>
+          <a
+            href="https://xn--80acgn7d.xn--p1ai/education/fakultety/fakultet-estestvennyh-nauk-matematiki-i-tehnologij/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-sans text-xl font-semibold tracking-tight text-foreground transition-opacity hover:opacity-70"
+          >
+            ФЕНМИТ ЗабГУ
+          </a>
+        </div>
 
         <div className="hidden items-center gap-8 md:flex">
           {["Главная", "О проекте", "Контакты"].map((item, index) => (
@@ -243,7 +250,7 @@ export default function Index() {
         </div>
 
         <MagneticButton variant="secondary" onClick={() => scrollToSection(2)}>
-          Контакты
+          Мы в Max
         </MagneticButton>
       </nav>
 
@@ -277,7 +284,7 @@ export default function Index() {
                 variant="primary"
                 onClick={() => scrollToSection(2)}
               >
-                Присоединиться
+                Мы в Max
               </MagneticButton>
               <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(1)}>
                 О проекте

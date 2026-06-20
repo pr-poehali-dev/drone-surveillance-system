@@ -45,9 +45,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "5000+", label: "Педагогов", sublabel: "Уже с нами", direction: "right" },
-              { value: "300+", label: "Материалов", sublabel: "В методической копилке", direction: "left" },
-              { value: "50+", label: "Курсов", sublabel: "С удостоверениями", direction: "right" },
+              { value: "3", label: "Актуальных модуля", sublabel: "В программе курса", direction: "right" },
+              { value: "1", label: "Итоговое тестирование", sublabel: "По завершении курса", direction: "left" },
+              { value: "Документ", label: "Об окончании", sublabel: "Государственного образца", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -84,7 +84,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(2)}>
-            Присоединиться
+            Мы в Max
           </MagneticButton>
         </div>
       </div>

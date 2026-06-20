@@ -53,7 +53,7 @@ export function ContactSection() {
 
             <div className="space-y-4 md:space-y-8">
               <a
-                href="mailto:info@pedagogpro.ru"
+                href="mailto:dopobrfenmit@gmail.com"
                 className={`group block transition-all duration-700 ${
                   isVisible ? "translate-x-0 opacity-100" : "-translate-x-16 opacity-0"
                 }`}
@@ -64,7 +64,7 @@ export function ContactSection() {
                   <span className="font-mono text-xs text-foreground/60">Email</span>
                 </div>
                 <p className="text-base text-foreground transition-colors group-hover:text-foreground/70 md:text-2xl">
-                  info@pedagogpro.ru
+                  dopobrfenmit@gmail.com
                 </p>
               </a>
 
@@ -78,24 +78,7 @@ export function ContactSection() {
                   <MapPin className="h-3 w-3 text-foreground/60" />
                   <span className="font-mono text-xs text-foreground/60">Локация</span>
                 </div>
-                <p className="text-base text-foreground md:text-2xl">Москва, Россия</p>
-              </div>
-
-              <div
-                className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
-                  isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-                }`}
-                style={{ transitionDelay: "500ms" }}
-              >
-                {["Telegram", "VK", "Дзен", "YouTube"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="border-b border-transparent font-mono text-xs text-foreground/60 transition-all hover:border-foreground/60 hover:text-foreground/90"
-                  >
-                    {social}
-                  </a>
-                ))}
+                <p className="text-base text-foreground md:text-2xl">Чита, ул.Бабушкина, д.129</p>
               </div>
             </div>
           </div>
