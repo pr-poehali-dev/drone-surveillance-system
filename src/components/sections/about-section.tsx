@@ -83,9 +83,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           }`}
           style={{ transitionDelay: "750ms" }}
         >
-          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(2)}>
-            Мы в Max
-          </MagneticButton>
+          <a href="https://max.ru/join/AnJJv_Pca65874Jz33EwOYw12DGJjMpp8VB47IGblWQ" target="_blank" rel="noopener noreferrer">
+            <MagneticButton size="lg" variant="primary">
+              Мы в Max
+            </MagneticButton>
+          </a>
         </div>
       </div>
     </section>

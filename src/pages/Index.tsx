@@ -249,9 +249,11 @@ export default function Index() {
           ))}
         </div>
 
-        <MagneticButton variant="secondary" onClick={() => scrollToSection(2)}>
-          Мы в Max
-        </MagneticButton>
+        <a href="https://max.ru/join/AnJJv_Pca65874Jz33EwOYw12DGJjMpp8VB47IGblWQ" target="_blank" rel="noopener noreferrer">
+          <MagneticButton variant="secondary">
+            Мы в Max
+          </MagneticButton>
+        </a>
       </nav>
 
       <div
@@ -279,13 +281,11 @@ export default function Index() {
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
-              <MagneticButton
-                size="lg"
-                variant="primary"
-                onClick={() => scrollToSection(2)}
-              >
-                Мы в Max
-              </MagneticButton>
+              <a href="https://max.ru/join/AnJJv_Pca65874Jz33EwOYw12DGJjMpp8VB47IGblWQ" target="_blank" rel="noopener noreferrer">
+                <MagneticButton size="lg" variant="primary">
+                  Мы в Max
+                </MagneticButton>
+              </a>
               <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(1)}>
                 О проекте
               </MagneticButton>
