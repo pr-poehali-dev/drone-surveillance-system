@@ -263,7 +263,7 @@ export default function Index() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Hero Section */}
-        <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
+        <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end overflow-y-auto px-6 pb-16 pt-24 md:px-12 md:pb-24" style={{ scrollbarWidth: "none" }}>
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
               <p className="font-mono text-xs text-foreground/90">Образование будущего</p>
@@ -292,12 +292,44 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in duration-1000 delay-500">
-            <div className="flex items-center gap-2">
-              <p className="font-mono text-xs text-foreground/80">Листайте вправо</p>
-              <div className="flex h-6 w-12 items-center justify-center rounded-full border border-foreground/20 bg-foreground/15 backdrop-blur-md">
-                <div className="h-2 w-2 animate-pulse rounded-full bg-foreground/80" />
+          <div className="mt-12 grid animate-in fade-in slide-in-from-bottom-4 grid-cols-1 gap-3 duration-1000 delay-500 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl">
+            {[
+              {
+                num: "01",
+                title: "ИИ и цифровая дидактика",
+                text: "Использование ИИ и цифровой дидактики в обучении соответствует требованиям ФГОС и помогает реализовать современные образовательные задачи, отвечая вызовам цифрового века.",
+              },
+              {
+                num: "02",
+                title: "Соответствие целям ФГОС",
+                text: "Деятельностный подход, развитие УУД, формирование функциональной грамотности, индивидуализация и развитие цифровых компетенций — всё это реализуется через ИИ-инструменты и цифровую дидактику.",
+              },
+              {
+                num: "03",
+                title: "ИИ — инструмент, а не замена педагога",
+                text: "Педагог сохраняет ведущую роль: ставит цели, продумывает логику урока, направляет учащихся. ИИ помогает структурировать идеи, подбирать задания и автоматизировать рутину.",
+              },
+              {
+                num: "04",
+                title: "Грамотное применение",
+                text: "При осознанном и методически выверенном использовании ИИ и цифровая дидактика становятся мощным ресурсом для реализации ФГОС, делая обучение современным и личностно-ориентированным.",
+              },
+            ].map((card) => (
+              <div
+                key={card.num}
+                className="rounded-xl border border-foreground/15 bg-foreground/10 p-4 backdrop-blur-md transition-all duration-300 hover:bg-foreground/15"
+              >
+                <span className="mb-2 block font-mono text-xs text-foreground/40">{card.num}</span>
+                <h3 className="mb-2 font-sans text-sm font-medium text-foreground">{card.title}</h3>
+                <p className="text-xs leading-relaxed text-foreground/70">{card.text}</p>
               </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex animate-in fade-in duration-1000 delay-700 items-center gap-2">
+            <p className="font-mono text-xs text-foreground/80">Листайте вправо</p>
+            <div className="flex h-6 w-12 items-center justify-center rounded-full border border-foreground/20 bg-foreground/15 backdrop-blur-md">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-foreground/80" />
             </div>
           </div>
         </section>
