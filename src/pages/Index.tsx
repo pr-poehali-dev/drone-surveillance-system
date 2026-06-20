@@ -1,8 +1,6 @@
 import { Shader, ChromaFlow, Swirl } from "shaders/react"
 import { CustomCursor } from "@/components/custom-cursor"
 import { GrainOverlay } from "@/components/grain-overlay"
-import { WorkSection } from "@/components/sections/work-section"
-import { ServicesSection } from "@/components/sections/services-section"
 import { AboutSection } from "@/components/sections/about-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { MagneticButton } from "@/components/magnetic-button"
@@ -220,13 +218,13 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">П</span>
+            <span className="font-sans text-xl font-bold text-foreground">Ф</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">ПедагогПро</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">ФЕНМИТ ЗабГУ</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Главная", "Материалы", "Направления", "О проекте", "Контакты"].map((item, index) => (
+          {["Главная", "О проекте", "Контакты"].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -244,8 +242,8 @@ export default function Index() {
           ))}
         </div>
 
-        <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Начать
+        <MagneticButton variant="secondary" onClick={() => scrollToSection(2)}>
+          Контакты
         </MagneticButton>
       </nav>
 
@@ -265,7 +263,7 @@ export default function Index() {
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Пространство для педагогов
+                КПК СИТвПД в соответствии с ФГОС СОО
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
@@ -277,12 +275,12 @@ export default function Index() {
               <MagneticButton
                 size="lg"
                 variant="primary"
-                onClick={() => scrollToSection(4)}
+                onClick={() => scrollToSection(2)}
               >
                 Присоединиться
               </MagneticButton>
-              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(2)}>
-                Направления
+              <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(1)}>
+                О проекте
               </MagneticButton>
             </div>
           </div>
@@ -297,8 +295,6 @@ export default function Index() {
           </div>
         </section>
 
-        <WorkSection />
-        <ServicesSection />
         <AboutSection scrollToSection={scrollToSection} />
         <ContactSection />
       </div>
